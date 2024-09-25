@@ -1,14 +1,12 @@
-package test;
+package ru.netology.web.test;
 
-import data.DataHelper;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import page.DashboardPage;
-import page.LoginPage;
+import ru.netology.web.data.DataHelper;
+import ru.netology.web.page.DashboardPage;
+import ru.netology.web.page.LoginPage;
 
-import static com.codeborne.selenide.Selenide.closeWindow;
 import static com.codeborne.selenide.Selenide.open;
 
 public class TransferMoneyTest {
@@ -23,10 +21,6 @@ public class TransferMoneyTest {
         verificationPage.validVerify(verificationCode);
     }
 
-    @AfterEach
-    void tearDown() {
-        closeWindow();
-    }
 
     @Test
     public void shouldTransferMoneyFromCardOneToCardTwo() {

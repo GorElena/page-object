@@ -1,11 +1,12 @@
-package data;
+package ru.netology.web.data;
 
 import lombok.Value;
 
 import java.util.Random;
 
 public class DataHelper {
-    private DataHelper() {}
+    private DataHelper() {
+    }
 
     @Value
     public static class AuthInfo {
